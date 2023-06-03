@@ -14,6 +14,31 @@ body {
 }
 
 .header {
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #3F88C5;
+}
+
+.navbar {
+  display: flex;
+  margin-right: 2rem;
+  list-style: none;
+}
+.navbar li {
+  padding: 1rem;
+}
+
+.list {
   align-items: center;
+  text-align: center;
+}
+.list h1 {
+  font-size: 4rem;
+}
+.list__background {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
 }/*# sourceMappingURL=index.css.map */

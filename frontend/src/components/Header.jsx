@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header className="header">
       <ul className="navbar">
-        <li>User Nam</li>
+        <li>User Name</li>
         <li>Log In/Out</li>
       </ul>
     </header>
