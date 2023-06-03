@@ -1,22 +1,43 @@
 .list{
-    text-align: center;
+    
     h1{
         font-size: 4rem;
-        //color: white;
+        text-align: center;
+        //color: white
+    }
+
+    &__input{
+
+      display: flex;
+      input{  font-size: 1.5rem;
+        width: 88vw;
+        text-align: center;
+        position: relative;
+        left: 4rem;}
+
+
+        button{
+          position: relative;
+          left: 4rem;
+          width: 3.3%;
+                }
+                
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      
     }
 
     &__background{
         width: 90vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 10px;
         padding: 0px 15px;
-        background-color: red;
+       
         border-radius: 5px;
         border: none;
         
         position: relative;
+
+        left: 4rem;
       
         font-weight: 900;
         transition-duration: .2s;
@@ -24,7 +45,7 @@
        background-color: #ffffff ;
        }
 
-       &__background:before,  &__background:after {
+       /*&__background:before,  &__background:after {
         content: '';
         position: absolute;
         left: -2px;
@@ -42,7 +63,7 @@
       
       &__background:after {
         filter: blur(100px);
-      }
+      }*/
        
       
       
