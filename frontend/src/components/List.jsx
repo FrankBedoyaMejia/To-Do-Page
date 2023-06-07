@@ -6,9 +6,12 @@ export const List = () => {
       <h1>TO DO LIST</h1>
       <div className="list__input">
         <input type="text" />
-        <button>Create</button>
+        <button className="list__button">
+          <span>Create</span>
+        </button>
       </div>
       <section className="list__background">
+        <Card_Todo />
         <Card_Todo />
       </section>
     </main>

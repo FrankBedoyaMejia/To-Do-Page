@@ -85,6 +85,24 @@ body {
   transition-duration: 0.2s;
   background-color: #ffffff;
 }
+.list__button {
+  border: 2px solid #212121;
+  background-color: #212121;
+  border-radius: 0.3em;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all ease-in-out 0.2s;
+  font-size: 16px;
+}
+.list__button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+.list__button:hover {
+  background-color: #0071e2;
+}
 
 .card {
   display: flex;
@@ -95,67 +113,91 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   background: #212121;
+  align-items: center;
+  height: 5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  /* Hide the default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
 }
 .card__text {
   display: flex;
   align-items: center;
-}
-.card__text h4 {
   color: white;
 }
-
-.button {
-  width: 25px;
-  height: 25px;
+.card__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.card__container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+.card__checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 25px;
+  transition: 0.15s;
+}
+.card__checkmark:hover {
+  background-color: limegreen;
+}
+.card__container input:checked ~ .card__checkmark {
+  background-color: limegreen;
+  border-radius: 25px;
+  transition: 0.15s;
+}
+.card__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.card__container input:checked ~ .card__checkmark:after {
+  display: block;
+}
+.card__container .card__checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+.card__button {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: rgb(20, 20, 20);
   border: none;
   font-weight: 600;
-  display: flex;
   align-items: center;
-  justify-content: center;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
   position: relative;
 }
-
-.svgIcon {
+.card__button svg {
   width: 12px;
   transition-duration: 0.3s;
 }
-
-.svgIcon path {
+.card__button svg path {
   fill: white;
 }
-
-.button:hover {
-  width: 140px;
-  border-radius: 50px;
-  transition-duration: 0.3s;
+.card__button:hover {
   background-color: rgb(255, 69, 69);
-  align-items: center;
-}
-
-.button:hover .svgIcon {
-  width: 50px;
-  transition-duration: 0.3s;
-  transform: translateY(60%);
-}
-
-.button::before {
-  position: absolute;
-  top: -20px;
-  content: "Delete";
-  color: white;
-  transition-duration: 0.3s;
-  font-size: 2px;
-}
-
-.button:hover::before {
-  font-size: 13px;
-  opacity: 1;
-  transform: translateY(30px);
-  transition-duration: 0.3s;
 }/*# sourceMappingURL=index.css.map */
